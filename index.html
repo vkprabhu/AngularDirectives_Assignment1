@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+    <head>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <title>Home page</title>
+        <script src="angular.js"></script>
+    </head>
+    <body>
+        <script>
+        var myModule = angular.module("myapp", []);
+        myModule.controller("mycontroller", function($scope) {
+            $scope.name = "vinay prabhu";
+            $scope.employeeid = 2314712;
+            $scope.designation = "software engineer";
+        });
+            
+        </script>
+        <div ng-controller="mycontroller">
+            <p>
+                Name: <input type="text" ng-model="name">
+            </p>
+        
+            <p>
+                EmployeeID: <input type="number" ng-model="employeeid">
+            </p>
+        
+            <p>
+                Designation: <input type="text" ng-model="designation">
+            </p>
+        </div>
+    </body>
+</html>
